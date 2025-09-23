@@ -13,17 +13,13 @@ driver.get("https://oneui-phtwo.canvas.cellcard.com.kh")
 print("Page Title:", driver.title)
 
 # --- Fill Username ---
-uname = driver.find_element(By.ID, "username")
-uname.send_keys("keanu")
+driver.find_element(By.ID, "username").send_keys("keanu")
 
 # --- Fill Password ---
-passw = driver.find_element(By.ID, "password")  # replace if different
-passw.send_keys("keanu@123")
+driver.find_element(By.ID, "password").send_keys("keanu@123",Keys.RETURN)
 
 # --- Press Enter to Submit ---
-passw.send_keys(Keys.RETURN)
 
-# Optional: wait to see what happens
-time.sleep(15)
+time.sleep(30)
 
 driver.quit()
